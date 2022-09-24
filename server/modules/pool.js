@@ -2,7 +2,7 @@ const pg = require('pg');
 
 // create a new pool config to connect to database.
 const pool = new pg.Pool({
-    database: 'react-gallery',
+    database: 'react_gallery',
     host: 'localhost',
     port: 5432,
     max: 10,
