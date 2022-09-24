@@ -3,6 +3,24 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 
+// POST route
+router.post('/', (req, res) => {
+    const newItem = req.body;
+    console.log('In POST route /gallery', newItem);
+    const queryText = `INSERT INTO "gallery_items" ("path", "description")
+    VALUES ($1, $2);`;
+    const values = [newItem.path, newItem.description]
+    pool.query(queryText, values)
+    .then(() => {
+        console.log('Successfully added a new item');
+        res.sendStatus(201);
+    })
+    .catch(err => {
+        console.log('Error adding a new item', err);
+        res.sendStatus(500);
+    });
+});
+
 // PUT Route
 router.put('/like/:id', (req, res) => {
     const id = req.params.id;
