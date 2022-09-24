@@ -38,6 +38,7 @@ function GalleryItem ({item, getGallery}) {
                 <p>Liked</p> :
                 <button onClick={() => handleClick(item.id)}>Like</button>}
                 <p>{item.likes === 0 ? 'No people like' : item.likes===1 ? `${item.likes} person likes` : `${item.likes} people like`} this!</p>
+                <button>Delete</button>
             </div>
         </div>
     );
