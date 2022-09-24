@@ -1,6 +1,6 @@
 CREATE TABLE "gallery_items" (
 	"id" SERIAL PRIMARY KEY,
-	"path" VARCHAR(300) NOT NULL,
+	"path" VARCHAR(30000) NOT NULL,
 	"description" VARCHAR(150) NOT NULL,
 	"likes" INTEGER DEFAULT '0'
 );
