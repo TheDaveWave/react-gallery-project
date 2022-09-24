@@ -18,6 +18,18 @@ function GalleryItem ({item, getGallery}) {
         });
     }
 
+    const deleteItem = (itemId) => {
+        console.log(`In axios DELETE /gallery/${itemId}`);
+        axios.delete(`/gallery/${itemId}`)
+        .then(() => {
+            // refresh the gallery.
+            getGallery();
+        })
+        .catch(err => {
+            console.log('Error in deleting item', err);
+        });
+    }
+
     // handle button click.
     const handleClick = (itemId) => {
         // call PUT request.
@@ -37,6 +49,7 @@ function GalleryItem ({item, getGallery}) {
                 {didLike ? 
                 <p>Liked</p> :
                 <button onClick={() => handleClick(item.id)}>Like</button>}
+                <button onClick={() => deleteItem(item.id)}>Delete</button>
                 <p>{item.likes === 0 ? 'No people like' : item.likes===1 ? `${item.likes} person likes` : `${item.likes} people like`} this!</p>
             </div>
         </div>

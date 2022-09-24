@@ -2,6 +2,22 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+// DELETE route
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(`In DELETE route /gallery/${id}`);
+    const queryText = `DELETE FROM "gallery_items" WHERE "id"=$1;`;
+
+    pool.query(queryText, [id])
+    .then(() => {
+        console.log(`Successfully deleted item with id:${id}`);
+        res.sendStatus(201);
+    })
+    .catch(err => {
+        console.log(`Error in deleting itemcwith id:${id}`, err);
+        res.sendStatus(500);
+    });
+});
 
 // POST route
 router.post('/', (req, res) => {
