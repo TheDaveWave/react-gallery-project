@@ -9,20 +9,50 @@
     font-size: 200%;
     background-color: grey;
     padding-bottom: 0.5%;
-    transform: translate(0, -40px);
+    transform: translate(0, -60px);
     user-select: none;
 }
 
 .gallery-form {
     background-color: grey;
-    height: 40px;
+    height: 60px;
     width: 100vw;
 }
 
 .gallery-form2 {
     background-color: grey;
-    height: 40px;
+    height: 60px;
     width: 100vw;
     visibility: hidden;
-    transform: translate(0, -40px);
+    transform: translate(0, -60px);
+}
+
+.item-form {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5%;
+}
+
+.item-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.item-form label {
+    color: #fff;
+}
+
+.item-form button {
+    width: 8%;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
 }
