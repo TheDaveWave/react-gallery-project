@@ -58,9 +58,7 @@ function GalleryItem ({item, getGallery}) {
                 <img src={item.path} alt="gallery item"/>}
             </div>
             <div className="display-banner">
-                {didLike ? 
-                <p>Liked</p> :
-                <button onClick={() => handleClick(item.id)}>Like</button>}
+                <button onClick={() => handleClick(item.id)}>Like</button>
                 <button onClick={() => deleteItem(item.id)}>Delete</button>
                 <p>{item.likes === 0 ? 'No people like' : item.likes===1 ? `${item.likes} person likes` : `${item.likes} people like`} this!</p>
             </div>
