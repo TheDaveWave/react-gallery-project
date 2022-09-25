@@ -26,7 +26,6 @@ The React Gallery is an app that allows a user to upload an image with a descrip
     - The display card on `hover` will enlarge for clarity.
     - Additionally the user may click on the photo to see the `description`.
 ![hover](previews/hover.png)
-
 ![description](previews/description.png)
 
 3. On each display card there is a `like button` and a `delete button`. 
