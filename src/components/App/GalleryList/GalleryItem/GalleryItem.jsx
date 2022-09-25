@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import './GalleryItem.css';
+import swal from "sweetalert";
 
 function GalleryItem ({item, getGallery}) {
     const [togglePic, setToggle] = useState(false);
@@ -19,14 +20,25 @@ function GalleryItem ({item, getGallery}) {
     }
 
     const deleteItem = (itemId) => {
-        console.log(`In axios DELETE /gallery/${itemId}`);
-        axios.delete(`/gallery/${itemId}`)
-        .then(() => {
-            // refresh the gallery.
-            getGallery();
+
+        swal({
+            title: 'Are you sure?',
+            text: 'Once delete it will be lost forever.',
+            buttons: true,
+            dangerMode: true
         })
-        .catch(err => {
-            console.log('Error in deleting item', err);
+        .then(ok => {
+            if(ok){
+                console.log(`In axios DELETE /gallery/${itemId}`);
+                axios.delete(`/gallery/${itemId}`)
+                .then(() => {
+                    // refresh the gallery.
+                    getGallery();
+                })
+                .catch(err => {
+                    console.log('Error in deleting item', err);
+                });
+            }
         });
     }
 
