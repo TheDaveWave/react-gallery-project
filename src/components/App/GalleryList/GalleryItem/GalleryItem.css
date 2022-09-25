@@ -2,24 +2,37 @@
     margin: auto 4%;
     margin-top: 2%;
     border: 1px solid #000;
+    border-radius: 3%;
     width: 200px;
     /* height: 200px; */
     user-select: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF;
+
+}
+
+.gallery-item:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .display {
     height: 150px;
     width: 150px;
     border: 1px solid #000;
-    margin: auto auto;
+    margin: 4% auto auto auto;
 
     text-align: center;
 }
 
 .display p {
-    margin: 20% 10%;
+    margin: 8% 10%;
 }
 
 .display-banner button {
     margin-top: 5%;
+    height: 27px;
+    width: 27px;
+    margin: 2% 8%;
 }

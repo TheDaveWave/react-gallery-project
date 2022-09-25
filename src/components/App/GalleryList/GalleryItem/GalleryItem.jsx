@@ -5,7 +5,6 @@ import swal from "sweetalert";
 
 function GalleryItem ({item, getGallery}) {
     const [togglePic, setToggle] = useState(false);
-    const [didLike, setDidLike] = useState(false);
 
     const updateLikes = (itemId) => {
         console.log(`In axios PUT route /gallery/like/${itemId}`)
@@ -42,14 +41,6 @@ function GalleryItem ({item, getGallery}) {
         });
     }
 
-    // handle button click.
-    const handleClick = (itemId) => {
-        // call PUT request.
-        updateLikes(itemId);
-        // set didLike to true.
-        setDidLike(true);
-    }
-
     return (
         <div className="gallery-item">
             <div className="display" onClick={() => {setToggle(!togglePic)}}>
@@ -58,8 +49,8 @@ function GalleryItem ({item, getGallery}) {
                 <img src={item.path} alt="gallery item"/>}
             </div>
             <div className="display-banner">
-                <button onClick={() => handleClick(item.id)}>Like</button>
-                <button onClick={() => deleteItem(item.id)}>Delete</button>
+                <button onClick={() => updateLikes(item.id)}>{'\u2713'}</button>
+                <button onClick={() => deleteItem(item.id)}>X</button>
                 <p>{item.likes === 0 ? 'No people like' : item.likes===1 ? `${item.likes} person likes` : `${item.likes} people like`} this!</p>
             </div>
         </div>
