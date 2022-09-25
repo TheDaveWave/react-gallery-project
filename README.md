@@ -1,9 +1,23 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: 2 Day Sprint_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+The React Gallery is an app that allows a user to upload an image with a description to the site. The site stores the uploaded information into a database. Users may like a gallery item or delete the item from the list. 
+
+---
+![webpage](previews/overview.png)
+---
+
+## Prerequisites
+
+-[node js](https://nodejs.org/en/)
+
+-[npm](https://docs.npmjs.com/)
+
+## Usage
+
+1. The user can upload a photo with a `description` by clicking on the `arrow` underneath the Gallery of My Life header.
+![form](previews/popout_form.png)
+ 
