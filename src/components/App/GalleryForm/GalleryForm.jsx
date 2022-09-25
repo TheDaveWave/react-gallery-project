@@ -50,6 +50,7 @@ function GalleryForm({getGallery}) {
             <form onSubmit={addItem}>
                 <label htmlFor="path-input">URL </label>
                 <input value={pathIn} onChange={evt => setPathIn(evt.target.value)} id="path-input" type="text" required/>
+                <br />
                 <label htmlFor="description-input">Description </label>
                 <input value={descIn} onChange={evt => setDescIn(evt.target.value)} id="description-input" type="text" required/>
                 <button type="submit">Submit</button>
