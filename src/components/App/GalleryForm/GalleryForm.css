@@ -1,0 +1,28 @@
+.down {
+    font-size: 200%;
+    background-color: grey;
+    padding-bottom: 0.5%;
+}
+
+.down2 {
+    font-size: 200%;
+    background-color: grey;
+    padding-bottom: 0.5%;
+    transform: translate(0, -40px);
+}
+
+.gallery-form {
+    background-color: grey;
+    height: 40px;
+    width: 100vw;
+    /* visibility: hidden; */
+    /* transform: translate(0, -40px); */
+}
+
+.gallery-form2 {
+    background-color: grey;
+    height: 40px;
+    width: 100vw;
+    visibility: hidden;
+    transform: translate(0, -40px);
+}
