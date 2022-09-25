@@ -20,10 +20,10 @@ function GalleryItem ({item, getGallery}) {
     }
 
     const deleteItem = (itemId) => {
-
+        // using sweetalert to confirm delete.
         swal({
             title: 'Are you sure?',
-            text: 'Once delete it will be lost forever.',
+            text: 'Once deleted it will be lost forever.',
             buttons: true,
             dangerMode: true
         })
