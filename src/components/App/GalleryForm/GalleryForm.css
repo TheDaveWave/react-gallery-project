@@ -1,26 +1,26 @@
 .down {
     font-size: 200%;
-    background-color: grey;
+    background-color: #F4D58D;
     padding-bottom: 0.5%;
     user-select: none;
 }
 
 .down2 {
     font-size: 200%;
-    background-color: grey;
+    background-color: #F4D58D;
     padding-bottom: 0.5%;
     transform: translate(0, -60px);
     user-select: none;
 }
 
 .gallery-form {
-    background-color: grey;
+    background-color: #F4D58D;
     height: 60px;
     width: 100vw;
 }
 
 .gallery-form2 {
-    background-color: grey;
+    background-color: #F4D58D;
     height: 60px;
     width: 100vw;
     visibility: hidden;
@@ -45,7 +45,9 @@
 }
 
 .item-form label {
+    font-size: 19px;
     color: #fff;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .item-form button {

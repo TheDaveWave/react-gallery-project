@@ -1,3 +1,7 @@
+.gallery-container {
+    width: 100vw;
+}
+
 .gallery-list{
     display: flex;
     flex-direction: row;
