@@ -2,6 +2,7 @@
     font-size: 200%;
     background-color: grey;
     padding-bottom: 0.5%;
+    user-select: none;
 }
 
 .down2 {
@@ -9,6 +10,7 @@
     background-color: grey;
     padding-bottom: 0.5%;
     transform: translate(0, -40px);
+    user-select: none;
 }
 
 .gallery-form {
