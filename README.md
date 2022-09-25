@@ -33,6 +33,12 @@ The React Gallery is an app that allows a user to upload an image with a descrip
     - Selecting the `delete button` will cause a pop up warning message to confirm before deleting the item.
 ![warning](previews/warning_message.png)
 
+## Built With
+
+-[React](https://reactjs.org/)
+
+-[Sweetalert](https://sweetalert.js.org/)
+
 ---
 ## Acknowledgement
 Thanks to [Emerging Digital Academy](https://emergingacademy.org/) for supplying me with the resources to complete this project.
