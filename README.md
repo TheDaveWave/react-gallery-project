@@ -1,4 +1,4 @@
-# React Gallery
+# Movie Gallery
 
 ## Description
 
